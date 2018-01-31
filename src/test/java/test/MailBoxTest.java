@@ -44,4 +44,6 @@ public class MailBoxTest extends BaseTest {
 		assertTrue(folderService.isSentFolderEmpty());
 	}
 
+
+
 }

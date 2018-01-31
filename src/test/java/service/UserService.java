@@ -3,7 +3,7 @@ package service;
 import org.openqa.selenium.WebDriver;
 
 import bo.User;
-import log.MyLogger;
+import log.CustomLogger;
 import page.InboxListPage;
 import page.LoginPage;
 import page.component.ToolbarComponent;
@@ -42,7 +42,7 @@ public class UserService {
 
 	public String getActualUserName(){
 		String actualUserName = new ToolbarComponent(driver).getUserName();
-		MyLogger.getLogger().info(String.format("Actual user name is: %s", actualUserName));
+		CustomLogger.getLogger().info(String.format("Actual user name is: %s", actualUserName));
 		return actualUserName;
 	}
 

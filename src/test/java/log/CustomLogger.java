@@ -5,11 +5,11 @@ import org.apache.logging.log4j.Logger;
 
 import test.MailBoxTest;
 
-public class MyLogger {
+public class CustomLogger {
 
 	private static  final Logger logger = LogManager.getLogger(MailBoxTest.class);
 
-	private MyLogger() {
+	private CustomLogger() {
 	}
 
 	public static Logger getLogger() {

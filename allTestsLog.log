@@ -1,0 +1,21 @@
+2018-01-31 13:03:45.319 [main] INFO  test.MailBoxTest - Create 3 email(s) with random data
+2018-01-31 13:04:05.099 [main] INFO  test.MailBoxTest - [Email [adress=qwerty2088@yandex.com, subject=testEmail812492, body=Hello! I'm a test email No46], Email [adress=qwerty7343@yandex.com, subject=testEmail799604, body=Hello! I'm a test email No22], Email [adress=qwerty5948@yandex.com, subject=testEmail775813, body=Hello! I'm a test email No42]]
+2018-01-31 13:04:06.399 [main] INFO  test.MailBoxTest - The 'Sent' folder is empty: true
+2018-01-31 13:04:55.983 [main] INFO  test.MailBoxTest - Actual user name is: module5testmailbox
+2018-01-31 13:04:56.732 [main] INFO  test.MailBoxTest - The number of emails in 'Sent' is: 1
+2018-01-31 13:04:57.540 [main] INFO  test.MailBoxTest - The number of emails in 'Draft' is: 7
+2018-01-31 13:04:57.541 [main] INFO  test.MailBoxTest - Create email with random data
+2018-01-31 13:04:59.448 [main] INFO  test.MailBoxTest - Email [adress=qwerty237@yandex.com, subject=testEmail123322, body=Hello! I'm a test email No20]
+2018-01-31 13:05:50.018 [main] INFO  test.MailBoxTest - The email with subject 'testEmail123322' is present in 'Drafts' folder: true
+2018-01-31 13:05:50.018 [main] INFO  test.MailBoxTest - Open an email with subject: testEmail123322
+2018-01-31 13:05:50.402 [main] INFO  test.MailBoxTest - Actual email adress is: qwerty237@yandex.com
+2018-01-31 13:05:50.429 [main] INFO  test.MailBoxTest - Actual email subject is: testEmail123322
+2018-01-31 13:05:50.467 [main] INFO  test.MailBoxTest - Actual email body is: Hello! I'm a test email No20
+2018-01-31 13:05:50.851 [main] INFO  test.MailBoxTest - Open an email with subject: testEmail123322
+2018-01-31 13:05:50.943 [main] INFO  test.MailBoxTest - Send an email from 'Drafts'
+2018-01-31 13:05:52.434 [main] INFO  test.MailBoxTest - The email with subject 'testEmail123322' is present in 'Drafts' folder: false
+2018-01-31 13:05:52.435 [main] INFO  test.MailBoxTest - Open 'Sent' folder
+2018-01-31 13:06:42.579 [main] INFO  test.MailBoxTest - The email with subject 'testEmail123322' is present in 'Sent' folder: true
+2018-01-31 13:06:53.939 [main] INFO  test.MailBoxTest - Create 3 email(s) with random data
+2018-01-31 13:07:00.984 [main] INFO  test.MailBoxTest - [Email [adress=qwerty2374@yandex.com, subject=testEmail116789, body=Hello! I'm a test email No38], Email [adress=qwerty9783@yandex.com, subject=testEmail137740, body=Hello! I'm a test email No54], Email [adress=qwerty1133@yandex.com, subject=testEmail603479, body=Hello! I'm a test email No55]]
+2018-01-31 13:07:02.176 [main] INFO  test.MailBoxTest - The 'Sent' folder is empty: true

@@ -2,7 +2,7 @@ package service;
 
 import org.openqa.selenium.WebDriver;
 
-import log.MyLogger;
+import log.CustomLogger;
 import page.DraftEmailPage;
 import page.DraftsListPage;
 import page.SentListPage;
@@ -21,7 +21,7 @@ public class FolderService {
 
 	public boolean isSentFolderEmpty(){
 		boolean isSentFolderEmpty = new SentListPage(driver).isSentFolderEmpty();
-		MyLogger.getLogger().info(String.format("The 'Sent' folder is empty: %s", isSentFolderEmpty));
+		CustomLogger.getLogger().info(String.format("The 'Sent' folder is empty: %s", isSentFolderEmpty));
 		return isSentFolderEmpty;
 	}
 
@@ -33,26 +33,26 @@ public class FolderService {
 	public int getnumberEmailsInDrafts(){
 		int numberEmailsInDrafts = new DraftsListPage(driver).toolbarComponent.openDraftsFolder().toolbarComponent.
 				getNumberOfEmailsInFolder(DRAFTS);
-		MyLogger.getLogger().info(String.format("The number of emails in 'Draft' is: %s", numberEmailsInDrafts));
+		CustomLogger.getLogger().info(String.format("The number of emails in 'Draft' is: %s", numberEmailsInDrafts));
 		return numberEmailsInDrafts;
 	}
 
 	public int getnumberEmailsInSent(){
 		int numberEmailsInSent = new SentListPage(driver).toolbarComponent.openSentFolder().toolbarComponent.
 				getNumberOfEmailsInFolder(SENT);
-		MyLogger.getLogger().info(String.format("The number of emails in 'Sent' is: %s", numberEmailsInSent));
+		CustomLogger.getLogger().info(String.format("The number of emails in 'Sent' is: %s", numberEmailsInSent));
 		return numberEmailsInSent;
 	}
 
 	public boolean isEmailPresentInDraftsList(String emailSubject){
 		boolean isEmailPresentInDraftsList = new DraftsListPage(driver).isEmailPresentInDraftsList(emailSubject);
-		MyLogger.getLogger().info(String.format
+		CustomLogger.getLogger().info(String.format
 				("The email with subject '%s' is present in 'Drafts' folder: %s", emailSubject, isEmailPresentInDraftsList));
 		return isEmailPresentInDraftsList;
 	}
 
 	public void openEmailBySubject(String emailSubject){
-		MyLogger.getLogger().info(String.format
+		CustomLogger.getLogger().info(String.format
 				("Open an email with subject: %s", emailSubject));
 		new DraftsListPage(driver).openEmailBySubject(emailSubject);
 	}
@@ -61,20 +61,20 @@ public class FolderService {
 		int numberEmailsInDrafts = new DraftsListPage(driver).toolbarComponent.openDraftsFolder().toolbarComponent.
 				getNumberOfEmailsInFolder(DRAFTS);
 		openEmailBySubject(emailSubject);
-		MyLogger.getLogger().info("Send an email from 'Drafts'");
+		CustomLogger.getLogger().info("Send an email from 'Drafts'");
 		new DraftEmailPage(driver).sendDraftEmail().toolbarComponent.openDraftsFolder().toolbarComponent.
 		waitForChangeOfNumberOfEmailsInFolder(numberEmailsInDrafts-1);
 	}
 
 	public boolean isEmailPresentInSentList(String emailSubject){
 		boolean isEmailPresentInSentList = new SentListPage(driver).isEmailPresentInSentList(emailSubject);
-		MyLogger.getLogger().info(String.format
+		CustomLogger.getLogger().info(String.format
 				("The email with subject '%s' is present in 'Sent' folder: %s", emailSubject, isEmailPresentInSentList));
 		return isEmailPresentInSentList;
 	}
 
 	public void openSentFolder(int expectedNumberOfEmails){
-		MyLogger.getLogger().info("Open 'Sent' folder");
+		CustomLogger.getLogger().info("Open 'Sent' folder");
 		new ToolbarComponent(driver).openSentFolder().toolbarComponent.waitForChangeOfNumberOfEmailsInFolder(expectedNumberOfEmails);;
 	}
 
